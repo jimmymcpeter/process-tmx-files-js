@@ -110,8 +110,10 @@ export async function removeInfoElements(opts: RemoveInfoElementsOptions) {
           }
         },
 
-        end: () => {
-          outputStream.close();
+        end: async () => {
+          await new Promise<void>((resolve) => {
+            outputStream.end(resolve);
+          });
         }
       }
     });

@@ -103,8 +103,10 @@ export async function searchReplaceAttributes(opts: SearchReplaceAttributesOptio
           outputStream.write(tag.isSelfClosing ? `/>` : `</${tag.name}>`);
         },
 
-        end: () => {
-          outputStream.close();
+        end: async () => {
+          await new Promise<void>((resolve) => {
+            outputStream.end(resolve);
+          });
         }
       }
     });
