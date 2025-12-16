@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tmx version="1.4">
+  <header
+    creationtool="Second Tool"
+    creationtoolversion="2.0"
+    segtype="block"
+    o-tmf="tmx"
+    adminlang="en-GB"
+    srclang="en-GB"
+    datatype="html"
+  />
+  <body>
+    <tu>
+      <tuv xml:lang="en-GB">
+        <seg>Second file content</seg>
+      </tuv>
+      <tuv xml:lang="de-DE">
+        <seg>Zweite Datei Inhalt</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-GB">
+        <seg>More content</seg>
+      </tuv>
+      <tuv xml:lang="de-DE">
+        <seg>Mehr Inhalt</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

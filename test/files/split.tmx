@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tmx version="1.4">
+  <header
+    creationtool="Test Tool"
+    creationtoolversion="1.0"
+    segtype="sentence"
+    o-tmf="tmx"
+    adminlang="en-US"
+    srclang="en-US"
+    datatype="plaintext"
+  />
+  <body>
+    <tu>
+      <tuv xml:lang="en-US"><seg>Translation 1</seg></tuv>
+      <tuv xml:lang="fr-FR"><seg>Traduction 1</seg></tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US"><seg>Translation 2</seg></tuv>
+      <tuv xml:lang="fr-FR"><seg>Traduction 2</seg></tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US"><seg>Translation 3</seg></tuv>
+      <tuv xml:lang="fr-FR"><seg>Traduction 3</seg></tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US"><seg>Translation 4</seg></tuv>
+      <tuv xml:lang="fr-FR"><seg>Traduction 4</seg></tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US"><seg>Translation 5</seg></tuv>
+      <tuv xml:lang="fr-FR"><seg>Traduction 5</seg></tuv>
+    </tu>
+  </body>
+</tmx>

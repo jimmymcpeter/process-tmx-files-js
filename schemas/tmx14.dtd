@@ -1,0 +1,171 @@
+<!-- Downloaded from https://resources.gala-global.org/24m7sgv/ -->
+
+<!-- TMX (Translation Memory eXchange)
+
+Known as "-//LISA OSCAR:1998//DTD for Translation Memory eXchange//EN"
+Use in TMX: <!DOCTYPE tmx SYSTEM "tmx14.dtd">
+
+An SGML application conforming to:
+- International Standard ISO 8879 Standard Generalized Markup Language, 
+- XML (Extensible Markup Language), W3C Recommendation
+
+All TMX element and attribute names must be in lowercase.
+
+-->
+
+<!ENTITY  lt   "&#38;#60;" >
+<!ENTITY  amp  "&#38;#38;" >
+<!ENTITY  gt   "&#62;" >
+<!ENTITY  apos "&#39;" >
+<!ENTITY  quot "&#34;" >
+
+<!ENTITY % segtypes    "block|paragraph|sentence|phrase" >
+
+
+<!--     ELEM                CONTENT                -->
+<!--     ATTR       
+         NAME                TYPE           DEFAULT -->
+
+
+<!-- Base Document Element -->
+   <!ELEMENT tmx             (header, body) > 
+   <!ATTLIST tmx
+         version             CDATA          #FIXED "1.4" >
+
+<!-- Header -->
+   <!ELEMENT header          (note|prop|ude)* >
+   <!ATTLIST header
+         creationtool        CDATA          #REQUIRED
+         creationtoolversion CDATA          #REQUIRED
+         segtype             (%segtypes;)   #REQUIRED
+         o-tmf               CDATA          #REQUIRED
+         adminlang           CDATA          #REQUIRED
+         srclang             CDATA          #REQUIRED
+         datatype            CDATA          #REQUIRED
+         o-encoding          CDATA          #IMPLIED
+         creationdate        CDATA          #IMPLIED
+         creationid          CDATA          #IMPLIED
+         changedate          CDATA          #IMPLIED
+         changeid            CDATA          #IMPLIED >
+
+<!-- Body -->
+   <!ELEMENT body            (tu*) >
+   <!-- No attributes            -->
+
+<!-- Note -->
+   <!ELEMENT note            (#PCDATA) >
+   <!ATTLIST note
+         o-encoding          CDATA          #IMPLIED 
+         xml:lang            CDATA          #IMPLIED
+         lang                CDATA          #IMPLIED >
+         <!-- lang is deprecated: use xml:lang -->
+
+<!-- User-defined Encoding -->
+   <!ELEMENT ude             (map+) >
+   <!ATTLIST ude
+         name                CDATA          #REQUIRED
+         base                CDATA          #IMPLIED >
+<!-- Note: the base attribute is required if one or more <map>
+     elements in the <ude> contain a code attribute. -->
+
+<!-- Character mapping -->
+   <!ELEMENT map             EMPTY >
+   <!ATTLIST map
+         unicode             CDATA          #REQUIRED
+         code                CDATA          #IMPLIED
+         ent                 CDATA          #IMPLIED
+         subst               CDATA          #IMPLIED >
+
+<!-- Property -->
+   <!ELEMENT prop            (#PCDATA) >
+   <!ATTLIST prop
+         type                CDATA          #REQUIRED 
+         xml:lang            CDATA          #IMPLIED
+         o-encoding          CDATA          #IMPLIED    
+         lang                CDATA          #IMPLIED >
+         <!-- lang is deprecated: use xml:lang -->
+
+
+<!-- Translation Unit -->
+   <!ELEMENT tu              ((note|prop)*, tuv+) >
+   <!ATTLIST tu
+         tuid                CDATA          #IMPLIED
+         o-encoding          CDATA          #IMPLIED
+         datatype            CDATA          #IMPLIED
+         usagecount          CDATA          #IMPLIED
+         lastusagedate       CDATA          #IMPLIED
+         creationtool        CDATA          #IMPLIED
+         creationtoolversion CDATA          #IMPLIED
+         creationdate        CDATA          #IMPLIED
+         creationid          CDATA          #IMPLIED
+         changedate          CDATA          #IMPLIED
+         segtype             (%segtypes;)   #IMPLIED
+         changeid            CDATA          #IMPLIED
+         o-tmf               CDATA          #IMPLIED
+         srclang             CDATA          #IMPLIED >
+
+<!-- Translation Unit Variant -->
+   <!ELEMENT tuv             ((note|prop)*, seg) >
+   <!ATTLIST tuv
+         xml:lang            CDATA          #REQUIRED
+         o-encoding          CDATA          #IMPLIED
+         datatype            CDATA          #IMPLIED
+         usagecount          CDATA          #IMPLIED
+         lastusagedate       CDATA          #IMPLIED
+         creationtool        CDATA          #IMPLIED
+         creationtoolversion CDATA          #IMPLIED
+         creationdate        CDATA          #IMPLIED
+         creationid          CDATA          #IMPLIED
+         changedate          CDATA          #IMPLIED
+         o-tmf               CDATA          #IMPLIED
+         changeid            CDATA          #IMPLIED
+         lang                CDATA          #IMPLIED >
+         <!-- lang is deprecated: use xml:lang -->
+
+<!-- Text -->
+   <!ELEMENT seg             (#PCDATA|bpt|ept|ph|it|hi|ut)* >
+
+
+<!-- Content Markup ================================================== -->
+
+   <!ELEMENT bpt             (#PCDATA|sub)* >
+   <!ATTLIST bpt
+          i                  CDATA          #REQUIRED
+          x                  CDATA          #IMPLIED
+          type               CDATA          #IMPLIED >
+
+   <!ELEMENT ept             (#PCDATA|sub)* >
+   <!ATTLIST ept
+          i                  CDATA          #REQUIRED >
+
+   <!ELEMENT sub             (#PCDATA|bpt|ept|it|ph|hi|ut)* >
+   <!ATTLIST sub
+         datatype            CDATA          #IMPLIED
+         type                CDATA          #IMPLIED >
+
+   <!ELEMENT it              (#PCDATA|sub)* >
+   <!ATTLIST it
+          pos                (begin|end)    #REQUIRED
+          x                  CDATA          #IMPLIED
+          type               CDATA          #IMPLIED >
+
+   <!ELEMENT ph              (#PCDATA|sub)* >
+   <!ATTLIST ph
+          x                  CDATA          #IMPLIED
+          assoc              CDATA          #IMPLIED
+          type               CDATA          #IMPLIED >
+
+   <!ELEMENT hi              (#PCDATA|bpt|ept|it|ph|hi|ut)* >
+   <!ATTLIST hi
+          x                  CDATA          #IMPLIED
+          type               CDATA          #IMPLIED >
+
+
+   <!-- The <ut> element is deprecated -->
+
+   <!ELEMENT ut              (#PCDATA|sub)* >
+   <!ATTLIST ut
+          x                  CDATA          #IMPLIED >
+
+
+<!-- End -->
