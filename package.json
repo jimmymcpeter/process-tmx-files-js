@@ -1,0 +1,61 @@
+{
+  "name": "process-tmx-files",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimmymcpeter/process-tmx-files-js.git"
+  },
+  "version": "0.0.1",
+  "description": "Process Translation Memory eXchange (TMX) files",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "./bin",
+    "./dist",
+    "./theme.json"
+  ],
+  "bin": {
+    "process-tmx-files": "./bin/run.js"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "pretest": "npm run type-check",
+    "type-check": "tsc --noEmit",
+    "test": "npx tsx --test-concurrency 1 --test test/*.test.ts",
+    "format": "npx prettier --write .",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "@oclif/core": "^4.8.0",
+    "event-streaming-xml-parser": "^1.0.0",
+    "glob": "^11.1.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.8",
+    "@types/node": "^20.19.26",
+    "prettier": "^3.7.4",
+    "rimraf": "^6.1.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "author": "James McGonegal",
+  "license": "MIT",
+  "oclif": {
+    "bin": "process-tmx-files",
+    "commands": "./dist/commands",
+    "theme": "./theme.json",
+    "topicSeparator": " ",
+    "topics": {}
+  }
+}

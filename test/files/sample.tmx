@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tmx version="1.4">
+  <header
+    creationtool="Test Tool"
+    creationtoolversion="1.0"
+    segtype="sentence"
+    o-tmf="tmx"
+    adminlang="en-US"
+    srclang="en-US"
+    datatype="plaintext"
+  >
+    <note>header note</note>
+  </header>
+  <body>
+    <tu>
+      <note>tu note</note>
+      <tuv xml:lang="en-US">
+        <note>tuv note</note>
+        <seg>Hello, how are you?</seg>
+      </tuv>
+      <tuv xml:lang="fr-FR">
+        <seg>Bonjour, comment vas-tu?</seg>
+      </tuv>
+      <tuv xml:lang="es-ES">
+        <seg>Hola, ¿cómo estás?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>I am fine, thank you.</seg>
+      </tuv>
+      <tuv xml:lang="fr-FR">
+        <seg>Je vais bien, merci.</seg>
+      </tuv>
+      <tuv xml:lang="es-ES">
+        <seg>Estoy bien, gracias.</seg>
+      </tuv>
+    </tu>
+    <tu>
+        <prop type="x-tu-prop-a">tu propa</prop>
+        <prop type="x-tu-prop-b">tu propb</prop>
+        <tuv xml:lang="en-US">
+          <seg>{count} file</seg>
+        </tuv>
+        <tuv xml:lang="fr-FR">
+          <prop type="x-tuv-prop-a">tuv prop1</prop>
+          <seg>{count} dossier</seg>
+        </tuv>
+        <tuv xml:lang="es-ES">
+          <prop type="x-tuv-prop-a">tuv prop2</prop>
+          <seg>{count} archivo</seg>
+        </tuv>
+      </tu>
+      <tu>
+        <prop type="x-tu-prop-a">tu propa</prop>
+        <prop type="x-tu-prop-b">tu propb</prop>
+        <tuv xml:lang="en-US">
+          <seg>{count} files</seg>
+        </tuv>
+        <tuv xml:lang="fr-FR">
+          <prop type="x-tuv-prop-b">tuv prop1</prop>
+          <seg>{count} dossiers</seg>
+        </tuv>
+        <tuv xml:lang="es-ES" datatype="">
+          <prop type="x-tuv-prop-b">tuv prop2</prop>
+          <seg>{count} archivos</seg>
+        </tuv>
+      </tu>
+  </body>
+</tmx>

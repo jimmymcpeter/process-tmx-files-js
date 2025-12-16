@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tmx version="1.4">
+  <header
+    creationtool="Single Lang Tool"
+    creationtoolversion="1.0"
+    segtype="sentence"
+    o-tmf="tmx"
+    adminlang="en-US"
+    srclang="en-US"
+    datatype="plaintext"
+  />
+  <body>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Only English here</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Another English segment</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

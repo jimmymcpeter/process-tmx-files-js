@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tmx version="1.4">
+  <header
+    creationtool="Mixed Tool"
+    creationtoolversion="1.0"
+    segtype="sentence"
+    o-tmf="tmx"
+    adminlang="en-US"
+    srclang="en-US"
+    datatype="plaintext"
+  />
+  <body>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>English only in first TU</seg>
+      </tuv>
+      <tuv xml:lang="fr-FR">
+        <seg>Français seulement dans le premier TU</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>English in second TU</seg>
+      </tuv>
+      <tuv xml:lang="de-DE">
+        <seg>Deutsch im zweiten TU</seg>
+      </tuv>
+      <tuv xml:lang="ja-JP">
+        <seg>日本語</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>
