@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.8",
-    "@types/node": "^20.19.26",
+    "@types/node": "^20.19.27",
     "prettier": "^3.7.4",
     "rimraf": "^6.1.2",
     "tsx": "^4.21.0",
