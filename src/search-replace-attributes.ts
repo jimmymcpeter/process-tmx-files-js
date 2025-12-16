@@ -36,7 +36,7 @@ export async function searchReplaceAttributes(opts: SearchReplaceAttributesOptio
     ignore: options.fileIgnore,
     cwd: options.cwd,
   });
-  console.debug(`Found ${tmxFiles.length} file(s)`);
+  console.log(`Found ${tmxFiles.length} file(s)`);
 
   for (const tmxFile of tmxFiles) {
     await searchAndReplaceFromFile(tmxFile);
@@ -50,7 +50,7 @@ export async function searchReplaceAttributes(opts: SearchReplaceAttributesOptio
       options.outputPath,
       filename
     );
-    console.debug(`Output =`, outputFile);
+    console.log(`Output to ${outputFile}`);
 
     createMissingDirectory(path.dirname(outputFile), true);
 

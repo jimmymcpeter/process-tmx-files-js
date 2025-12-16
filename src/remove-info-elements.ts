@@ -47,7 +47,7 @@ export async function removeInfoElements(opts: RemoveInfoElementsOptions) {
       options.outputPath,
       filename
     );
-    console.log(`Output =`, outputFile);
+    console.log(`Output to ${outputFile}`);
 
     createMissingDirectory(path.dirname(outputFile), true);
 

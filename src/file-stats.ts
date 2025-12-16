@@ -47,7 +47,7 @@ export async function fileStats(opts: FileStatsOptions) {
     ignore: options.fileIgnore,
     cwd: options.cwd,
   });
-  console.debug(`Found ${tmxFiles.length} file(s)`);
+  console.log(`Found ${tmxFiles.length} file(s)`);
 
   for (const tmxFile of tmxFiles) {
     // Convert backslashes to forward slashes to be consistent across platforms
@@ -59,7 +59,7 @@ export async function fileStats(opts: FileStatsOptions) {
 
 
   async function getStatsFromFile(filename: string) {
-    console.debug(`Processing ${filename}...`);
+    console.log(`Processing ${filename}...`);
 
     const filepath = path.join(options.cwd, filename);
 
