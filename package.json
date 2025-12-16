@@ -32,7 +32,7 @@
     "build": "tsc",
     "pretest": "npm run type-check",
     "type-check": "tsc --noEmit",
-    "test": "npx tsx --test-concurrency 1 --test test/*.test.ts",
+    "test": "tsx --test-concurrency 1 --test test/*.test.ts",
     "format": "npx prettier --write .",
     "prepack": "npm run build"
   },
