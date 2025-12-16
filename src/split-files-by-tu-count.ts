@@ -66,7 +66,7 @@ export async function splitFilesByTuCount(opts: SplitFilesByTuCountOptions) {
     await parseXml({
       filename: path.join(options.cwd, filename),
       listeners: {
-        opentag: (tag) => {
+        opentag: async (tag) => {
           const outputStr = createTagOpenXml(tag);
     
           if (TMX.tmxEleName == tag.name) {
@@ -92,7 +92,10 @@ export async function splitFilesByTuCount(opts: SplitFilesByTuCountOptions) {
             if (fileTuCount > maxTuCount) {
               fileNo++;
               outputStream.write(`${endXml}`);
-              outputStream.close();
+              
+              await new Promise<void>((resolve) => {
+                outputStream.end(resolve);
+              });
     
               outputStream = openOutputFile(filename, fileNo, `${startXml}${headerXml}${bodyXmlOpen}`);
               fileTuCount = 1;
@@ -136,8 +139,10 @@ export async function splitFilesByTuCount(opts: SplitFilesByTuCountOptions) {
           outputStream.write(outputStr);
         },
 
-        end: () => {
-          outputStream.close();
+        end: async () => {
+          await new Promise<void>((resolve) => {
+            outputStream.end(resolve);
+          });
           if (fileNo > 1 && fileTuCount == 0) {
             // Delete file with no tu elements
             fs.rmSync(outputFile(filename, fileNo));
