@@ -4,7 +4,7 @@
     "type": "git",
     "url": "git+https://github.com/jimmymcpeter/process-tmx-files-js.git"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Process Translation Memory eXchange (TMX) files",
   "type": "module",
   "engines": {
