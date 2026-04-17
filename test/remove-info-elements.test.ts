@@ -3,7 +3,7 @@ import assert from 'node:assert';
 import url from 'node:url';
 import path from 'node:path';
 import fs from 'node:fs';
-import { removeInfoElements } from '../src/remove-info-elements.ts';
+import { removeInfoElements } from '../src/remove-info-elements.js';
 
 describe('remove-info-elements', async () => {
   const dirname = `${path.dirname(url.fileURLToPath(import.meta.url))}`;

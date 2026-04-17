@@ -2,7 +2,7 @@ import { describe, test, beforeEach, afterEach } from 'node:test';
 import assert from 'node:assert';
 import url from 'node:url';
 import path from 'node:path';
-import { fileStats } from '../src/file-stats.ts';
+import { fileStats } from '../src/file-stats.js';
 
 describe('file-stats', () => {
   const testFilesDir = `${path.dirname(url.fileURLToPath(import.meta.url))}/files`;
@@ -15,7 +15,7 @@ describe('file-stats', () => {
       ],
     });
 
-    assert.deepEqual(stats['sample.tmx'].header, {
+    assert.deepEqual(stats['sample.tmx']!.header, {
       creationtool: 'Test Tool',
       creationtoolversion: '1.0',
       segtype: 'sentence',
@@ -25,7 +25,7 @@ describe('file-stats', () => {
       datatype: 'plaintext',
     });
 
-    assert.deepEqual(stats['sample.tmx'].body, {
+    assert.deepEqual(stats['sample.tmx']!.body, {
       tu: {
         count: 4,
         tuv: {
@@ -42,7 +42,7 @@ describe('file-stats', () => {
       },
     });
 
-    assert.equal((stats['sample.tmx'].size > 0), true);
+    assert.equal((stats['sample.tmx']!.size > 0), true);
   });
 
   test('handle file with empty body', async () => {
@@ -51,9 +51,9 @@ describe('file-stats', () => {
       fileMatch: 'empty-body.tmx',
     });
 
-    assert.equal(stats['empty-body.tmx'].body.tu.count, 0);
-    assert.deepEqual(stats['empty-body.tmx'].body.tu.tuv, {});
-    assert.ok(stats['empty-body.tmx'].size > 0);
+    assert.equal(stats['empty-body.tmx']!.body.tu.count, 0);
+    assert.deepEqual(stats['empty-body.tmx']!.body.tu.tuv, {});
+    assert.ok(stats['empty-body.tmx']!.size > 0);
   });
 
   test('handle file with single language', async () => {
@@ -62,8 +62,8 @@ describe('file-stats', () => {
       fileMatch: 'single-language.tmx',
     });
 
-    assert.equal(stats['single-language.tmx'].body.tu.count, 2);
-    assert.deepEqual(stats['single-language.tmx'].body.tu.tuv, {
+    assert.equal(stats['single-language.tmx']!.body.tu.count, 2);
+    assert.deepEqual(stats['single-language.tmx']!.body.tu.tuv, {
       'en-US': {
         count: 2,
       },
@@ -77,11 +77,11 @@ describe('file-stats', () => {
       fileMatch: mixedFile,
     });
 
-    assert.equal(stats[mixedFile].body.tu.count, 2);
-    assert.equal(stats[mixedFile].body.tu.tuv['en-US'].count, 2);
-    assert.equal(stats[mixedFile].body.tu.tuv['fr-FR'].count, 1);
-    assert.equal(stats[mixedFile].body.tu.tuv['de-DE'].count, 1);
-    assert.equal(stats[mixedFile].body.tu.tuv['ja-JP'].count, 1);
+    assert.equal(stats[mixedFile]!.body.tu.count, 2);
+    assert.equal(stats[mixedFile]!.body.tu.tuv['en-US']!.count, 2);
+    assert.equal(stats[mixedFile]!.body.tu.tuv['fr-FR']!.count, 1);
+    assert.equal(stats[mixedFile]!.body.tu.tuv['de-DE']!.count, 1);
+    assert.equal(stats[mixedFile]!.body.tu.tuv['ja-JP']!.count, 1);
   });
 
   test('process files with different header attributes', async () => {
@@ -90,7 +90,7 @@ describe('file-stats', () => {
       fileMatch: 'second.tmx',
     });
 
-    assert.deepEqual(stats['second.tmx'].header, {
+    assert.deepEqual(stats['second.tmx']!.header, {
       creationtool: 'Second Tool',
       creationtoolversion: '2.0',
       segtype: 'block',

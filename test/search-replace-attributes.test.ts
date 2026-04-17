@@ -3,7 +3,7 @@ import assert from 'node:assert';
 import url from 'node:url';
 import path from 'node:path';
 import fs from 'node:fs';
-import { searchReplaceAttributes } from '../src/search-replace-attributes.ts';
+import { searchReplaceAttributes } from '../src/search-replace-attributes.js';
 
 describe('search-replace-attributes', async () => {
   const dirname = `${path.dirname(url.fileURLToPath(import.meta.url))}`;
