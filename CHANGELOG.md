@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/jimmymcpeter/process-tmx-files-js/compare/v1.0.2...v2.0.0) (2026-04-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** bump event-streaming-xml-parser from 1.0.1 to 2.0.0 and drop support for node 20 ([#37](https://github.com/jimmymcpeter/process-tmx-files-js/issues/37))
+
+### Build System
+
+* **deps:** bump event-streaming-xml-parser from 1.0.1 to 2.0.0 and drop support for node 20 ([#37](https://github.com/jimmymcpeter/process-tmx-files-js/issues/37)) ([4bc39e5](https://github.com/jimmymcpeter/process-tmx-files-js/commit/4bc39e5c964afe0b3f6686c86a0c1442762cae52))
+
 ## [1.0.2](https://github.com/jimmymcpeter/process-tmx-files-js/compare/v1.0.1...v1.0.2) (2026-04-17)
 
 
