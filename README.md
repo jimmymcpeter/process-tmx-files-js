@@ -4,7 +4,7 @@ Exported [Translation Memory eXchange (TMX) files](https://resources.gala-global
 
 ## Requirements
 
-- Node.js >= v20
+- Node.js >= v22
 - ESM
 
 ## Install
