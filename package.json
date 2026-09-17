@@ -37,7 +37,7 @@
     "prepack": "npm run build"
   },
   "dependencies": {
-    "@oclif/core": "^4.8.0",
+    "@oclif/core": "^5.0.0",
     "event-streaming-xml-parser": "^2.0.1",
     "glob": "^13.0.0"
   },
