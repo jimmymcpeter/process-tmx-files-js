@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.1](https://github.com/jimmymcpeter/process-tmx-files-js/compare/v2.0.0...v2.0.1) (2026-09-17)
+
+
+### Bug Fixes
+
+* **deps:** bump brace-expansion from 5.0.5 to 5.0.12 ([#63](https://github.com/jimmymcpeter/process-tmx-files-js/issues/63)) ([8cb0125](https://github.com/jimmymcpeter/process-tmx-files-js/commit/8cb012534cc2595ca1c79b5ade4f8880bafe5e85))
+* **deps:** bump event-streaming-xml-parser from 2.0.0 to 2.0.1 ([#61](https://github.com/jimmymcpeter/process-tmx-files-js/issues/61)) ([a5ada9f](https://github.com/jimmymcpeter/process-tmx-files-js/commit/a5ada9f8890b26694f8368f2b7fa17680c3e999d))
+
 ## [2.0.0](https://github.com/jimmymcpeter/process-tmx-files-js/compare/v1.0.2...v2.0.0) (2026-04-17)
 
 
