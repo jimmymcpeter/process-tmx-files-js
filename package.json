@@ -39,7 +39,7 @@
   "dependencies": {
     "@oclif/core": "^5.0.0",
     "event-streaming-xml-parser": "^2.0.1",
-    "glob": "^13.0.0"
+    "glob": "^14.0.3"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.5",
